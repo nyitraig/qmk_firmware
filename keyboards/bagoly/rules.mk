@@ -9,7 +9,7 @@ BOOTLOADER = stm32-dfu
 #   change to "no" to disable the options, or define them in the Makefile in
 #   the appropriate keymap folder that will get included automatically
 #
-BOOTMAGIC_ENABLE = full      # Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = lite      # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = no         # Mouse keys
 EXTRAKEY_ENABLE = no         # Audio control and System control
 CONSOLE_ENABLE = yes         # Console for debug
@@ -20,7 +20,7 @@ MIDI_ENABLE = no             # MIDI controls
 AUDIO_ENABLE = no           # Audio output
 UNICODE_ENABLE = no          # Unicode
 BLUETOOTH_ENABLE = no        # Enable Bluetooth with the Adafruit EZ-Key HID
-# RGBLIGHT_ENABLE = yes        # Enable WS2812 RGB underlight.
+RGBLIGHT_ENABLE = yes        # Enable WS2812 RGB underlight.
 # WS2812_DRIVER = pwm
 # API_SYSEX_ENABLE = no
 
