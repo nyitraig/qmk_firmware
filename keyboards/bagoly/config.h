@@ -25,10 +25,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER   0x0001
 #define MANUFACTURER nyiti
 #define PRODUCT      bagoly
+#define DESCRIPTION  Gaming keypad by Gergo Nyitrai
 
 /* key matrix size */
-#define MATRIX_ROWS 2
-#define MATRIX_COLS 3
+#define MATRIX_ROWS 3
+#define MATRIX_COLS 5
 
 /*
  * Keyboard Matrix Assignments
@@ -40,8 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
-#define MATRIX_ROW_PINS { D0, D5 }
-#define MATRIX_COL_PINS { F1, F0, B0 }
+#define MATRIX_ROW_PINS { B0, B1, B2 }
+#define MATRIX_COL_PINS { A1, A0, B8, B13, B14 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL */
