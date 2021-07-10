@@ -14,45 +14,27 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
+#include "joystick.h"
 
-// Defines names for use in layer keycodes and the keymap
-enum layer_names {
-    _BASE
-};
-
-// Defines the keycodes used by our macros in process_record_user
-enum custom_keycodes {
-    QMKBEST = SAFE_RANGE,
-    QMKURL
-};
+#define ADC_PIN1 B1
+#define ADC_PIN2 B0
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
-    [_BASE] = LAYOUT(
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, \
-        KC_NO, KC_NO, KC_NO, KC_NO, RGB_MOD, \
-        KC_NO, KC_NO, KC_NO, KC_NO, RGB_TOG
+    [0] = LAYOUT(
+        JS_BUTTON0,  JS_BUTTON1,  JS_BUTTON2,  JS_BUTTON3,  JS_BUTTON4,              \
+        JS_BUTTON5,  JS_BUTTON6,  JS_BUTTON7,  JS_BUTTON8,  JS_BUTTON9,              \
+        JS_BUTTON10, JS_BUTTON11, JS_BUTTON12, JS_BUTTON13, JS_BUTTON14,             \
+                                                                         JS_BUTTON15 \
     )
 };
 
+joystick_config_t joystick_axes[JOYSTICK_AXES_COUNT] = {
+    // JOYSTICK_AXIS_IN(INPUT_PIN, LOW, REST, HIGH)
+    [0] = JOYSTICK_AXIS_IN(ADC_PIN1, 900, 575, 285),
+    [1] = JOYSTICK_AXIS_IN(ADC_PIN2, 900, 575, 285),
+};
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case QMKBEST:
-            if (record->event.pressed) {
-                // when keycode QMKBEST is pressed
-                SEND_STRING("QMK is the best thing ever!");
-            } else {
-                // when keycode QMKBEST is released
-            }
-            break;
-        case QMKURL:
-            if (record->event.pressed) {
-                // when keycode QMKURL is pressed
-                SEND_STRING("https://qmk.fm/\n");
-            } else {
-                // when keycode QMKURL is released
-            }
-            break;
-    }
     return true;
 }

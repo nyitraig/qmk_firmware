@@ -28,8 +28,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DESCRIPTION  Gaming keypad by Gergo Nyitrai
 
 /* key matrix size */
-#define MATRIX_ROWS 3
-#define MATRIX_COLS 5
+#define MATRIX_ROWS 4
+#define MATRIX_COLS 6
 
 /*
  * Keyboard Matrix Assignments
@@ -41,17 +41,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
-#define MATRIX_ROW_PINS { B0, B1, B2 }
-#define MATRIX_COL_PINS { A1, A0, B8, B13, B14 }
+#define MATRIX_ROW_PINS { B10, B11, B12, B2 }
+#define MATRIX_COL_PINS { A1, A0, B8, B13, B14, B3 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
-
-/*
- * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
- */
-#define SOFT_SERIAL_PIN D0  // or D1, D2, D3, E6
 
 /* RGB Underglow */
 #ifdef RGBLIGHT_ENABLE
@@ -132,3 +127,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Bootmagic Lite key configuration */
 //#define BOOTMAGIC_LITE_ROW 0
 //#define BOOTMAGIC_LITE_COLUMN 0
+
+#define JOYSTICK_BUTTON_COUNT 16
+#define JOYSTICK_AXES_COUNT 2
