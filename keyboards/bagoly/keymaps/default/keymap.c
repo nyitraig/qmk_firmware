@@ -22,10 +22,9 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [0] = LAYOUT(
-        JS_BUTTON0,  JS_BUTTON1,  JS_BUTTON2,  JS_BUTTON3,  JS_BUTTON4,              \
-        JS_BUTTON5,  JS_BUTTON6,  JS_BUTTON7,  JS_BUTTON8,  JS_BUTTON9,              \
-        JS_BUTTON10, JS_BUTTON11, JS_BUTTON12, JS_BUTTON13, JS_BUTTON14,             \
-                                                                         JS_BUTTON15 \
+        JS_BUTTON0,  JS_BUTTON1,  JS_BUTTON2,  JS_BUTTON3,  JS_BUTTON4, \
+        JS_BUTTON5,  JS_BUTTON6,  JS_BUTTON7,  JS_BUTTON8,  JS_BUTTON9, \
+        JS_BUTTON10, JS_BUTTON11, JS_BUTTON12, JS_BUTTON13, JS_BUTTON14 \
     )
 };
 
@@ -34,7 +33,3 @@ joystick_config_t joystick_axes[JOYSTICK_AXES_COUNT] = {
     [0] = JOYSTICK_AXIS_IN(ADC_PIN1, 900, 575, 285),
     [1] = JOYSTICK_AXIS_IN(ADC_PIN2, 900, 575, 285),
 };
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    return true;
-}

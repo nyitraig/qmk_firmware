@@ -27,16 +27,12 @@
  * represents the switch matrix.
  */
 
-#define XXX KC_NO
-
 #define LAYOUT( \
-    K00, K01, K02, K03, K04,     \
-    K10, K11, K12, K13, K14,     \
-    K20, K21, K22, K23, K24,     \
-                             K35 \
+    K00, K01, K02, K03, K04, \
+    K10, K11, K12, K13, K14, \
+    K20, K21, K22, K23, K24  \
 ) { \
-    { K00, K01, K02, K03, K04, XXX }, \
-    { K10, K11, K12, K13, K14, XXX }, \
-    { K20, K21, K22, K23, K24, XXX }, \
-    { XXX, XXX, XXX, XXX, XXX, K35 }  \
+    { K00, K01, K02, K03, K04, }, \
+    { K10, K11, K12, K13, K14, }, \
+    { K20, K21, K22, K23, K24  }  \
 }
